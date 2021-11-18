@@ -1,0 +1,162 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 1200px;
+  margin: 45px auto;
+}
+@media only screen and (max-width: 800px) {
+    .container {
+    display: grid;
+    grid-template-columns: 3fr;
+    margin: 25px auto;
+    }
+}
+.content {
+  padding-right: 30px;
+  padding-left: 20px;
+}
+.sidebar {
+  padding-left: 30px;
+  padding-right: 20px;
+}
+.sidebar form {
+  padding: 20px;
+  background: #1f9751;
+  border: 2px dotted #125c31;
+  border-radius: 10px;
+}
+.sidebar .budget form {
+  padding: 20px;
+  background: #a30000;
+  border: 2px dotted #ca0000;
+  border-radius: 10px;
+}
+.sidebar input, .sidebar select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 4px;
+  color: #555;
+  font-size: 1em;
+}
+.sidebar label {
+  margin: 0 auto 20px;
+  display: block;
+  color: #fff;
+}
+.sidebar button {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 8px 12px;
+  background-color: transparent;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+}
+.sidebar h3 {
+  color: #1f9751;
+  margin-bottom: 20px;
+}
+.sidebar .budget h3 {
+  color: #990000;
+  margin-top: 20px;
+}
+.sidebar aside {
+  margin-top: 40px;
+  color: #555;
+}
+.sidebar aside li {
+  margin: 10px;
+}
+
+/* total amount */
+.total {
+  margin: 0px auto;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid #fdc200;
+}
+.total .amount {
+  margin-left: auto;
+  margin-right: 20px;
+  color: rgb(97, 97, 97);
+  font-weight: 500;
+  font-size: 1.6em;
+}
+.total .name {
+  color: #777;
+  font-size: 1.2em;
+}
+.negative {
+    color: red;
+}
+
+hr {
+    border: 1px dotted #bcffc2;
+    margin: 30px auto;
+}
+/* transactions */
+.transactions li {
+  margin: 20px auto;
+  border: 1px solid #f2f2f2;
+  box-shadow: 3px 3px 5px rgba(50,50,50,0.1);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid #1f9751;
+}
+.transactions .name {
+  color: #777;
+  font-size: 1.4em;
+}
+.transactions .date {
+  margin-left: 40px;
+  margin-right: 20px;
+  color: rgb(168, 168, 168);
+  font-weight: 500;
+  font-size: 0.85em;
+}
+@media only screen and (max-width: 800px) {
+    .transactions .date {
+        margin-left: 20px;
+        font-size: 0.8em;
+    }
+    .amount {
+        margin-right: 20px !important;
+        font-size: 1.3em !important;
+    }
+    .name {
+        font-size: 1em !important;
+    }
+}
+.transactions .amount {
+  margin-left: auto;
+  margin-right: 40px;
+  color: rgb(97, 97, 97);
+  font-weight: 500;
+  font-size: 1.6em;
+}
+.transactions button {
+  position: absolute;
+  top: 0;
+  right:0;
+  background: #ddd;
+  color: #777;
+  border: none;
+  padding: 12px 8px;
+  text-align: center;
+  line-height: 0;
+  font-size: 0.9em;
+  cursor: pointer;
+}

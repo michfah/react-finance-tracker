@@ -1,0 +1,43 @@
+.navbar {
+    width: 100%;
+    background: #effaf0;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border-bottom: 3px dotted #bcffc2;
+}
+.navbar ul {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1060px;
+    align-items: center;
+}
+.title {
+    margin-right: auto;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+}
+.icon {
+    padding-right: 6px;
+}
+.navbar button, .navbar a {
+    margin-left: 26px;
+}
+.navbar a {
+    color: #333;
+    text-decoration: none;
+}
+@media only screen and (max-width: 800px) {
+    .title {
+        margin-right: auto;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 1em;
+    }
+    .username {
+        font-size: 0.9em;
+    }
+    .icon {
+        display: none;
+    }
+}

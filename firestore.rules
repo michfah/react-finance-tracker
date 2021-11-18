@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /transactions/{document=**} {
+      // if user is authenticated, can create
+      allow create: if request.auth != null;
+      // if user auth ID matches ID prop in document, can read, delete
+      allow read, delete: if request.auth.uid == resource.data.uid;
+    }
+    match /budgets/{document=**} {
+      allow create: if request.auth != null;
+      allow read, delete: if request.auth.uid == resource.data.uid;
+    }
+  }
+}
